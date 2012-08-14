@@ -427,7 +427,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = PlanetariumDebug;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -514,7 +514,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Planetarium;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
