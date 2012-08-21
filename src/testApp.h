@@ -19,9 +19,6 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    ofImage planet;
-    ofImage stars;
-    
-    int rotationCounter;
+        int rotationCounter;
 		
 };

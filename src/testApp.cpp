@@ -2,11 +2,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-    
-    planet.loadImage("images/planet.png");
-    stars.loadImage("images/stars.jpg");
-    
-    planet.setImageType(OF_IMAGE_COLOR_ALPHA);
+
     
     ofEnableAlphaBlending();
     
@@ -25,13 +21,17 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    stars.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
     
-    ofPushMatrix();
-    ofTranslate(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
-    ofRotateZ(rotationCounter);
-    planet.draw(-planet.width/2,-planet.height/2);
-    ofPopMatrix();
+    ofSetColor(0, 0, 0 );
+    ofRect(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+    
+//    stars.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
+    
+//    ofPushMatrix();
+//    ofTranslate(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
+//    ofRotateZ(rotationCounter);
+//    planet.draw(-planet.width/2,-planet.height/2);
+//    ofPopMatrix();
     
     rotationCounter++;
 
