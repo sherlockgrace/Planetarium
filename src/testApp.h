@@ -1,10 +1,18 @@
 #pragma once
 
 #include "ofMain.h"
+#include <iostream>
+
+#include "TimeManager.h"
+#include "CollisionManager.h"
+#include "ParticleManager.h"
 
 class testApp : public ofBaseApp{
 
 	public:
+		CollisionManager collisionManager;
+		ParticleManager particleManager;
+	
 		void setup();
 		void update();
 		void draw();

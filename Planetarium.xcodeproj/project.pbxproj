@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6E46E615E9936F008EE303 /* HashGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E46E515E9936F008EE303 /* HashGrid.cpp */; };
+		1B6E46E815E99406008EE303 /* ParticleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E46E715E99406008EE303 /* ParticleManager.cpp */; };
+		1B7DF20A15EC4AA0009E3E5F /* TimeManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DF20915EC4AA0009E3E5F /* TimeManager.cpp */; };
+		1BA3BF0F15E7309000DF2C65 /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3BF0E15E7309000DF2C65 /* CollisionManager.cpp */; };
+		1BF3042015EB1DFE00A0697F /* HashCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3041F15EB1DFE00A0697F /* HashCell.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -58,6 +63,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B6E46E515E9936F008EE303 /* HashGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashGrid.cpp; sourceTree = "<group>"; };
+		1B6E46E715E99406008EE303 /* ParticleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleManager.cpp; sourceTree = "<group>"; };
+		1B7DF20915EC4AA0009E3E5F /* TimeManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeManager.cpp; sourceTree = "<group>"; };
+		1BA3BF0D15E72F5700DF2C65 /* CollisionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionManager.h; sourceTree = "<group>"; };
+		1BA3BF0E15E7309000DF2C65 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
+		1BA3BF1115E73F7200DF2C65 /* HashGrid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashGrid.h; sourceTree = "<group>"; };
+		1BAA8E3E15EB3C8800532F6F /* TimeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeManager.h; sourceTree = "<group>"; };
+		1BB5BA0815E9C0E400A9DDB9 /* HashCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashCell.h; sourceTree = "<group>"; };
+		1BF3041F15EB1DFE00A0697F /* HashCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashCell.cpp; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -109,6 +123,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BA3BF1015E73F4A00DF2C65 /* HashGrid */ = {
+			isa = PBXGroup;
+			children = (
+				1BA3BF1115E73F7200DF2C65 /* HashGrid.h */,
+				1B6E46E515E9936F008EE303 /* HashGrid.cpp */,
+				1BB5BA0815E9C0E400A9DDB9 /* HashCell.h */,
+				1BF3041F15EB1DFE00A0697F /* HashCell.cpp */,
+			);
+			name = HashGrid;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,11 +202,17 @@
 			isa = PBXGroup;
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
+				1BA3BF0D15E72F5700DF2C65 /* CollisionManager.h */,
+				1BA3BF0E15E7309000DF2C65 /* CollisionManager.cpp */,
+				1BA3BF1015E73F4A00DF2C65 /* HashGrid */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
+				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				F45E5D6615E34A4D005881F5 /* ParticleManager.h */,
+				1B6E46E715E99406008EE303 /* ParticleManager.cpp */,
 				F45E5D6215E34246005881F5 /* particle.h */,
 				F45E5D6415E34257005881F5 /* particle.cpp */,
+				1BAA8E3E15EB3C8800532F6F /* TimeManager.h */,
+				1B7DF20915EC4AA0009E3E5F /* TimeManager.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -282,6 +313,11 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				F45E5D6515E34257005881F5 /* particle.cpp in Sources */,
+				1BA3BF0F15E7309000DF2C65 /* CollisionManager.cpp in Sources */,
+				1B6E46E615E9936F008EE303 /* HashGrid.cpp in Sources */,
+				1B6E46E815E99406008EE303 /* ParticleManager.cpp in Sources */,
+				1BF3042015EB1DFE00A0697F /* HashCell.cpp in Sources */,
+				1B7DF20A15EC4AA0009E3E5F /* TimeManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

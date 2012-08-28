@@ -1,9 +1,14 @@
 #include "testApp.h"
 
+
 //--------------------------------------------------------------
 void testApp::setup(){
 
-    
+	collisionManager.setup(10, particleManager);
+	particleManager.setup(collisionManager.gridSize, collisionManager);
+	
+	TimeManager::initialize();
+	
     ofEnableAlphaBlending();
     
     rotationCounter = 0;
@@ -17,6 +22,13 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
 
+	TimeManager::update();
+	collisionManager.update();
+	particleManager.update();
+	
+	
+	cout << TimeManager::getTimeSeconds() << endl;
+	cout << ofGetElapsedTimeMillis() << endl;	
 }
 
 //--------------------------------------------------------------
@@ -24,6 +36,8 @@ void testApp::draw(){
     
     ofSetColor(0, 0, 0 );
     ofRect(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	
+	particleManager.draw();
     
 //    stars.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
     

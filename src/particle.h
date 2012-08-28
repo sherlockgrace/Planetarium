@@ -10,29 +10,42 @@
 #define Planetarium_particle_h
 
 #include "ofMain.h"
+#include "TimeManager.h"
 
+class HashCell;
 
-class particle : public ofPoint{
+enum PAR_TYPE {TYPE_BASE, 
+               TYPE_SEED, 
+               TYPE_SOIL, 
+               TYPE_WATER, 
+               TYPE_OXEYGEN,
+               TYPE_CARBON,
+               TYPE_ROCK};
+
+class particle{
     
 private:
     ofVec2f pos;
     ofVec2f vel;
     
-    int previousTime;
     float weight;
     float speed;
+    float radius;
+    int gridKey[2]; // this will be using with the hashGrid to see if the 
+	HashCell * myCell;
     
 public:
-    void setup(float x, float y);
+    PAR_TYPE myType;
+    
+    void setup(float _x, float _y, PAR_TYPE myType);
     void update();
     void draw();
     
     void lookAtOtherPartical(particle & part);
-    
     void updateTime();
     
-    
-
+    float getX();
+    float getY();
     
 };
 
