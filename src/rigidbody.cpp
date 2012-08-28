@@ -8,7 +8,13 @@
 
 #include "rigidbody.h"
 
-typedef struct_RigidBody {
+float RigidBody2D;
+float Spaceship;
+float bodies;
+
+
+
+typdef struct_RigidBody {
     float fMass; //total mass (constant)
     float fInertia; //mass moment of inertia in body coordinates
     float fInertiaInverse; //inverse mass moment of inertia
@@ -36,12 +42,11 @@ typedef struct_RigidBody {
     float fLength;
     
     
-}rigidbody, *pRigidbody2D ;
+}Rigidbody2D, *pRigidbody2D;
 
 
 
-void InitializeSpaceship(pRigidbody2D body)
-{
+void InitializeSpaceship(RigidBody2D body) {
     //Set initial position
     body->vPosition.x = 0.0f;
     body->vPosition.y = 0.0f;
@@ -76,11 +81,37 @@ void InitializeSpaceship(pRigidbody2D body)
     //Set the initial orientation
     body->fOrientation = 0.0;
     
-    //
+    //Now define the mass properties
+    body->fMass = 621.6;
+    body->fInertia = 383320;
+    body->FIntertiaInverse = 1.0f / body->fInertia;
     
+    //coordinates of the body center of drag
+    body->CD.x = -2.5f;      body->CD.y = 0.0f;
+    
+    //coordinates of the propeller thrust vector
+    body->CT.x = -30.0f;     body->CT.y = 0.0f;
+    
+    //coordinates of the port bow thruster
+    body->CPT.x = 30.0f;     body->CPT.y = 25.0f;
+    
+    //coordinates of the standard bow thruster
+    body->CST.x = 30.0f;     body->CST.y = -25.0f;
 }
 
 
+void UpdateBody(pRigidBody2D craft float dtime)
+{
+    Vector Ae;
+    float Aa;
+    RigidBody2D body;
+    Vector      k1 k2;
+    float       k1a, k2a;
+    float       dt = dtime;
+    
+    //make a copy of the spaceship's state
+    
+}
 
 
 
